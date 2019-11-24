@@ -4,7 +4,7 @@ import {createBrowserHistory} from 'history'
 
 const history = createBrowserHistory()
 
-const files = ['01', '02', '03', '04', '05', '06', '07']
+const files = ['01', '02', '03', '04', '05', '06', '07', '08']
 
 const pages = files.reduce((p, filename, index, fullArray) => {
   const final = require(`./exercises-final/${filename}`)
@@ -34,7 +34,7 @@ const filesAndTitles = files.map(filename => ({
 
 function ComponentContainer({label, ...props}) {
   return (
-    <div style={{display: 'flex', flexDirection: 'column'}}>
+    <div className="kizo" style={{display: 'flex', flexDirection: 'column'}}>
       <h2 style={{textAlign: 'center'}}>{label}</h2>
       <div
         style={{
