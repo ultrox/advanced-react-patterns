@@ -4,7 +4,7 @@ import {createBrowserHistory} from 'history'
 
 const history = createBrowserHistory()
 
-const files = ['01', '02', '03', '04', '05', '06', '07', '08']
+const files = ['01', '02','03', '04', '05','06a', '06']
 
 const pages = files.reduce((p, filename, index, fullArray) => {
   const final = require(`./exercises-final/${filename}`)
@@ -34,7 +34,7 @@ const filesAndTitles = files.map(filename => ({
 
 function ComponentContainer({label, ...props}) {
   return (
-    <div className="kizo" style={{display: 'flex', flexDirection: 'column'}}>
+    <div style={{display: 'flex', flexDirection: 'column'}}>
       <h2 style={{textAlign: 'center'}}>{label}</h2>
       <div
         style={{
@@ -62,9 +62,9 @@ function ExerciseContainer({exerciseId}) {
         padding: 20,
         height: '100%',
         display: 'grid',
-        gridGap: '20px',
+        gridGap: '5px',
         gridTemplateColumns: '1fr 1fr',
-        gridTemplateRows: '30px 1fr 30px',
+        gridTemplateRows: '0px 1fr 0px',
       }}
     >
       <h1 style={{gridColumn: 'span 2', textAlign: 'center'}}>{Final.title}</h1>
@@ -156,8 +156,8 @@ function FullPage({type, exerciseId}) {
       <div
         style={{
           flex: 1,
-          padding: 20,
-          margin: 20,
+          padding: 10,
+          margin: 10,
           border: '1px solid',
           display: 'grid',
           alignItems: 'center',
