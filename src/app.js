@@ -4,7 +4,9 @@ import {createBrowserHistory} from 'history'
 
 const history = createBrowserHistory()
 
-const files = ['01', '02', '03', '04', '05', '06a', '06b', '06']
+const part1 = ['01', '02', '03', '04', '05', '06a', '06b', '06', '07', '08', '09', '10']
+const part2 = [99, 100, 50]
+const files = part1.concat(part2)
 
 const pages = files.reduce((p, filename, index, fullArray) => {
   const final = require(`./exercises-final/${filename}`)
