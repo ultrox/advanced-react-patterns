@@ -55,18 +55,9 @@ function useToggle({initialOn = false} = {}) {
   }
 }
 
-/*
-🦉 Elaboration & Feedback
-After the instruction, copy the URL below into your browser and fill out the form:
-http://ws.kcd.im/?ws=Advanced%20React%20Patterns&e=State%20Reducers&em=
-*/
-
-////////////////////////////////////////////////////////////////////
-//                                                                //
-//                 Don't make changes below here.                 //
-// But do look at it to see how your code is intended to be used. //
-//                                                                //
-////////////////////////////////////////////////////////////////////
+/****************************************************************************/
+//                 Don't make changes below here.                 
+// But do look at it to see how your code is intended to be used.
 
 function Usage() {
   const [timesClicked, setTimesClicked] = React.useState(0)
