@@ -1,7 +1,7 @@
 import React from 'react'
 import {Router, Link} from '@reach/router'
 import {createBrowserHistory} from 'history'
-
+import './style.css'
 const history = createBrowserHistory()
 
 const part1 = ['01', '02', '03', '04', '05', '06a', '06b', '06', '07', '08', '09', '10']
@@ -196,21 +196,19 @@ function Home() {
   return (
     <div style={{maxWidth: 800, margin: '50px auto 0px auto'}}>
       <h1 style={{textAlign: 'center'}}>Advanced React Patterns</h1>
-      <div>
+      <ol>
         {filesAndTitles.map(({title, filename}) => {
           return (
-            <div key={filename} style={{margin: 10}}>
-              {filename}
-              {'. '}
+            <li key={filename} style={{margin: 10}}>
               <Link to={`/${filename}`}>{title}</Link>{' '}
               <small>
                 <Link to={`/${filename}/exercise`}>(exercise)</Link>{' '}
                 <Link to={`/${filename}/final`}>(final)</Link>
               </small>
-            </div>
+            </li>
           )
         })}
-      </div>
+      </ol>
     </div>
   )
 }
